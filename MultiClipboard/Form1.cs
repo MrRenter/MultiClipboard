@@ -33,8 +33,14 @@ namespace MultiClipboard
             RegisterHotKey(this.Handle, 1, 6, Keys.S.GetHashCode());
 
             clipboard3 = Clipboard.GetText(TextDataFormat.Text);
-        }
+            char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+            foreach (char c in alpha)
+            {
+                comboBox1.Items.Add(c);
+                comboBox2.Items.Add(c);
+            }
 
+        }
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -71,6 +77,11 @@ namespace MultiClipboard
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
