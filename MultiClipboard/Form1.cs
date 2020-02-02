@@ -76,3 +76,11 @@ namespace MultiClipboard
         }
     }
 }
+
+
+//TODO
+//Listen for CTRL-C to update GUI
+//Add Second clipboard
+//Properly Name GUI elements
+//Minimize to tray
+//Generate dropdown key list
