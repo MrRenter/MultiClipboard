@@ -28,61 +28,101 @@ namespace MultiClipboard
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.debugInstructionsLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.helloWorldLabel = new System.Windows.Forms.Label();
+            this.clipboardOneInfo = new System.Windows.Forms.Label();
+            this.clipboardTwoInfo = new System.Windows.Forms.Label();
+            this.clipboardThreeInfo = new System.Windows.Forms.Label();
+            this.clipboardOneObject = new System.Windows.Forms.TextBox();
+            this.clipboardTwoObject = new System.Windows.Forms.TextBox();
+            this.clipboardThreeObject = new System.Windows.Forms.TextBox();
+            this.lastID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // clipboardOneInfo
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(191, 351);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(418, 20);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click here to continue learning how to build a desktop app!";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.clipboardOneInfo.AutoSize = true;
+            this.clipboardOneInfo.Location = new System.Drawing.Point(43, 49);
+            this.clipboardOneInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.clipboardOneInfo.Name = "clipboardOneInfo";
+            this.clipboardOneInfo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.clipboardOneInfo.Size = new System.Drawing.Size(63, 23);
+            this.clipboardOneInfo.TabIndex = 1;
+            this.clipboardOneInfo.Text = "Clipboard 1:";
             // 
-            // debugInstructionsLabel
+            // clipboardTwoInfo
             // 
-            this.debugInstructionsLabel.AutoSize = true;
-            this.debugInstructionsLabel.Location = new System.Drawing.Point(146, 107);
-            this.debugInstructionsLabel.Name = "debugInstructionsLabel";
-            this.debugInstructionsLabel.Size = new System.Drawing.Size(532, 20);
-            this.debugInstructionsLabel.TabIndex = 1;
-            this.debugInstructionsLabel.Text = "Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app!";
+            this.clipboardTwoInfo.AutoSize = true;
+            this.clipboardTwoInfo.Location = new System.Drawing.Point(43, 75);
+            this.clipboardTwoInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.clipboardTwoInfo.Name = "clipboardTwoInfo";
+            this.clipboardTwoInfo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.clipboardTwoInfo.Size = new System.Drawing.Size(63, 23);
+            this.clipboardTwoInfo.TabIndex = 3;
+            this.clipboardTwoInfo.Text = "Clipboard 2:";
             // 
-            // button1
+            // clipboardThreeInfo
             // 
-            this.button1.Location = new System.Drawing.Point(325, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Click Me!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.clipboardThreeInfo.AutoSize = true;
+            this.clipboardThreeInfo.Location = new System.Drawing.Point(43, 101);
+            this.clipboardThreeInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.clipboardThreeInfo.Name = "clipboardThreeInfo";
+            this.clipboardThreeInfo.Size = new System.Drawing.Size(63, 13);
+            this.clipboardThreeInfo.TabIndex = 4;
+            this.clipboardThreeInfo.Text = "Clipboard 3:";
+            this.clipboardThreeInfo.Click += new System.EventHandler(this.clipboardThreeInfo_Click);
             // 
-            // helloWorldLabel
+            // clipboardOneObject
             // 
-            this.helloWorldLabel.AutoSize = true;
-            this.helloWorldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helloWorldLabel.Location = new System.Drawing.Point(303, 30);
-            this.helloWorldLabel.Name = "helloWorldLabel";
-            this.helloWorldLabel.Size = new System.Drawing.Size(192, 37);
-            this.helloWorldLabel.TabIndex = 3;
-            this.helloWorldLabel.Text = "Hello World!";
+            this.clipboardOneObject.Location = new System.Drawing.Point(111, 46);
+            this.clipboardOneObject.Name = "clipboardOneObject";
+            this.clipboardOneObject.Size = new System.Drawing.Size(360, 20);
+            this.clipboardOneObject.TabIndex = 5;
+            // 
+            // clipboardTwoObject
+            // 
+            this.clipboardTwoObject.Location = new System.Drawing.Point(111, 72);
+            this.clipboardTwoObject.Name = "clipboardTwoObject";
+            this.clipboardTwoObject.Size = new System.Drawing.Size(360, 20);
+            this.clipboardTwoObject.TabIndex = 6;
+            // 
+            // clipboardThreeObject
+            // 
+            this.clipboardThreeObject.Location = new System.Drawing.Point(111, 98);
+            this.clipboardThreeObject.Name = "clipboardThreeObject";
+            this.clipboardThreeObject.Size = new System.Drawing.Size(360, 20);
+            this.clipboardThreeObject.TabIndex = 7;
+            // 
+            // lastID
+            // 
+            this.lastID.AutoSize = true;
+            this.lastID.Location = new System.Drawing.Point(436, 151);
+            this.lastID.Name = "lastID";
+            this.lastID.Size = new System.Drawing.Size(0, 13);
+            this.lastID.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Last Hotkey Pressed:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.helloWorldLabel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.debugInstructionsLabel);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lastID);
+            this.Controls.Add(this.clipboardThreeObject);
+            this.Controls.Add(this.clipboardTwoObject);
+            this.Controls.Add(this.clipboardOneObject);
+            this.Controls.Add(this.clipboardThreeInfo);
+            this.Controls.Add(this.clipboardTwoInfo);
+            this.Controls.Add(this.clipboardOneInfo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -91,11 +131,14 @@ namespace MultiClipboard
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label debugInstructionsLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label helloWorldLabel;
+        private System.Windows.Forms.Label clipboardOneInfo;
+        private System.Windows.Forms.Label clipboardTwoInfo;
+        private System.Windows.Forms.Label clipboardThreeInfo;
+        private System.Windows.Forms.TextBox clipboardOneObject;
+        private System.Windows.Forms.TextBox clipboardTwoObject;
+        private System.Windows.Forms.TextBox clipboardThreeObject;
+        private System.Windows.Forms.Label lastID;
+        private System.Windows.Forms.Label label1;
     }
 }
 
